@@ -5,7 +5,7 @@
 <div class="container">
     <!-- <h1>task 1</h1>
     <a class="btn btn-success" href="javascript:void(0)" id="createNewBook"> Create New Book</a><br><br> -->
-    <table class="table table-bordered data-table table-striped ">
+    <table class="table table-bordered data-table table-striped " id="myTable">
         <thead>
             <tr>
                 <!-- <th>name</th>

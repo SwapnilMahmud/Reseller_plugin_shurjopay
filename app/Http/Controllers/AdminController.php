@@ -64,17 +64,6 @@ class AdminController extends Controller
             $r->password=Hash::make('sp123');
             $r->save();
         }
-//  public function showdata(Request $request)
-//         {
-            
-//         $table = MerchantInfo::latest()->get();        
-//         if ($request->ajax()) {
-//             $data = MerchantInfo::latest()->get();
-//             return Datatables::of($data)->addIndexColumn()->make(true);
-//         }      
-//         return view('transactiontables',compact('table'));
-//         }
-
 
         public function index(Request $request){
 
@@ -88,7 +77,26 @@ class AdminController extends Controller
             return view('bookd',compact('table'));
 
         }
-    //
+//  public function showdata(Request $request)
+//         {
+            
+//         $table = MerchantInfo::latest()->get();        
+//         if ($request->ajax()) {
+//             $data = MerchantInfo::latest()->get();
+//             return Datatables::of($data)->addIndexColumn()->make(true);
+//         }      
+//         return view('transactiontables',compact('table'));
+//         }
+
+
+// public function getCategory(){
+//     $filter_data = $this->input->post('filter_data');
+//     parse_str($filter_data, $params);
+//     $category = $this->home_model->categoryList($params);
+//     $json_data['data'] = $category;
+//     echo json_encode($json_data);
+//    }
+//     //
     // public function getData(Request $request){
         
     //     $draw=$request->get('draw');
