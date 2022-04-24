@@ -15,7 +15,7 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('/login');
 });
 
 //Route for admin panel
@@ -38,10 +38,11 @@ Route::get('admin/logout',function(){
     return redirect('admin');
 });
 
-Route::get('/datatable', function () {
-    return view('datatable');
+//datatable
+Route::get('/fetch-employee', [AdminController::class, 'fetchemployee']);
+Route::get('/transactiontables', function () {
+    return view('transactiontables');
 });
-
 
 });
 //Route for shurjoPay 

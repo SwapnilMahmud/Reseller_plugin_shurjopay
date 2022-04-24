@@ -28,12 +28,15 @@ class AdminController extends Controller
         //return $request->post(); 
          // echo '<pre>';
         // print_r($result);
-         $email=$request->post('email');                 
+         $email=$request->post('email');    
+        //     echo '<pre>';
+        // print_r($email);
+        // die();             
          $result=Admin::where(['email'=>$email])->first();
-         
-    //   echo '<pre>';
-    //     print_r($result);
-    //     die();
+        //  dd($result);
+        // echo '<pre>';
+        // print_r($result);
+        // die();
         if($result){                 
             if(Hash::check($request->post('password'), $result->password)){
                 $request->session()->put('ADMIN_LOGIN',true);
@@ -65,6 +68,7 @@ class AdminController extends Controller
             $r->save();
         }
 
+
         public function index(Request $request){
 
             $table = MerchantInfo::latest()->get();        
@@ -77,52 +81,15 @@ class AdminController extends Controller
             return view('bookd',compact('table'));
 
         }
-//  public function showdata(Request $request)
-//         {
-            
-//         $table = MerchantInfo::latest()->get();        
-//         if ($request->ajax()) {
-//             $data = MerchantInfo::latest()->get();
-//             return Datatables::of($data)->addIndexColumn()->make(true);
-//         }      
-//         return view('transactiontables',compact('table'));
-//         }
+   
 
 
-// public function getCategory(){
-//     $filter_data = $this->input->post('filter_data');
-//     parse_str($filter_data, $params);
-//     $category = $this->home_model->categoryList($params);
-//     $json_data['data'] = $category;
-//     echo json_encode($json_data);
-//    }
-//     //
-    // public function getData(Request $request){
-        
-    //     $draw=$request->get('draw');
-       
-    //     $start=$request->get("start");
-    //     dd($start);
-    //     $rowPerPage=$request->get("length");
-    //     $orderArray=$request->get('order');       
-    //     $columnNameArray=$request->get('columns');
-    //     $searchArray=$request->get('search');
-    //     $columnIndex=$orderArray[0]['column'];
-    //     $columnName=$columnNameArray[$columnIndex]['data'];
-    //     $columnSortOrder=$orderArray[0]['dir'];
-    //     $searchValue=$searchValue['value'];
-    //     $users=\DB::table('merchant_informations');
-    //     $total=$users->count();
-    //     $totalFilter=$total;
-    //     $arrData=\DB::table('merchant_informations');
-    //     $arrData=$arrData->get();
-    //     $response=array(          
-    //         "draw"=>intval($draw),
-    //         "recordsTotal"=>$total,
-    //         "recordFiltered"=>$totalFilter,
-    //         "data"=>$arrData,
-    //     );
-    //     return response()->json($response);
-    // }
+        public function fetchemployee( )
+    {
+        //
+        $employee= MerchantInfo::all();
+        // dd($employee);
+        return response()->json(['emp'=>$employee,]);
+    }
 
 }

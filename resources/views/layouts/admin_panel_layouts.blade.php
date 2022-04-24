@@ -36,6 +36,10 @@
     position: fixed;
     height:100%;
    }
+   .fa-bars{
+             margin-left:10px;
+         }
+     
 </style>
   </head>
 
@@ -69,7 +73,7 @@
                     </a>
                     <ul class="nav child_menu">
                       <li>
-                        <a href="/bookd">Search Transaction</a>
+                        <a href="/transactiontables">Search Transaction</a>
                       </li>
                     </ul>
                   </li>
@@ -78,12 +82,12 @@
                       <i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span>
                     </a>
                     <ul class="nav child_menu">
-                      <li>
-                        <a href="fixed_sidebar.html">Fixed Sidebar</a>
+                      <!-- <li>
+                        <a href="">Fixed Sidebar</a>
                       </li>
                       <li>
-                        <a href="/datatable">Fixed Footer</a>
-                      </li>
+                        <a href="">Fixed Footer</a>
+                      </li> -->
                     </ul>
                   </li>
                 </ul>
