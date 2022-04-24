@@ -39,7 +39,9 @@
    .fa-bars{
              margin-left:10px;
          }
-     
+     .navbar{
+       width:169px;
+     }
 </style>
   </head>
 

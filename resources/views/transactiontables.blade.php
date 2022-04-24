@@ -42,7 +42,13 @@
          .fa-bars{
              margin-left:10px;
          }
-   
+    
+         /* .left_col{
+   width:169px;
+}
+ .nav_title{
+   width:169px;
+} */
       </style>
    </head>
    <body class="nav-md">
