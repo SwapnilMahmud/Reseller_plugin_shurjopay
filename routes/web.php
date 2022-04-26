@@ -45,7 +45,7 @@ Route::post('domain_return',[ShurjopayController::class, 'ReturnPay']);
 
 Route::get('/pdf',[PdfController::class,'generate']);
 Route::get('/excel',[PdfController::class, 'generateexcel']);
-
+Route::get('/invoice',[PdfController::class, 'generatinvoice']);
 
 // Route::get('/transactiontable',[AdminController::class,'showdata']);
 
