@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShurjopayController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PdfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,19 +26,11 @@ Route::post('admin/auth',[AdminController::class,'auth'])->name('admin.auth');
 Route::group(['middleware'=>'admin_auth'],function(){
 // Route::resource('transactiontables',AdminController::class);   
 Route::get('admin_panel',[AdminController::class,'dashboard']);
-//for datatable
-Route::get('/bookd', function () {
-    return view('bookd');
-});
-Route::resource('books', AdminController::class);
-//for logout
 Route::get('admin/logout',function(){
     session()->forget('ADMIN_LOGIN');
     session()->forget('ADMIN_ID');
     session()->flash('error','Logout sucessfully');
-    return redirect('admin');
-});
-
+    return redirect('admin');});
 //datatable
 Route::get('/fetch-employee', [AdminController::class, 'fetchemployee']);
 Route::get('/transactiontables', function () {
@@ -50,6 +43,8 @@ Route::get('/domainpay', [ShurjopayController::class, 'checkout']);
 Route::get('/verify',[ShurjopayController::class, 'verify']);
 Route::post('domain_return',[ShurjopayController::class, 'ReturnPay']);
 
+Route::get('/pdf',[PdfController::class,'generate']);
+Route::get('/excel',[PdfController::class, 'generateexcel']);
 
 
 // Route::get('/transactiontable',[AdminController::class,'showdata']);

@@ -326,9 +326,7 @@ $(document).ready(function(){
             <td>'+item.customer_name+'</td>\
             <td>'+item.email+'</td>\
              <td>'+item.customer_address+'</td>\
-             <td>'+item.customer_country+'</td>\
              <td>'+item.customer_city+'</td>\
-             <td>'+item.customer_postcode+'</td>\
              <td>'+item.tx_id+'</td>\
              <td>'+item.sp_bank_status+'</td>\
              <td>'+item.sp_bank_trx_id+'</td>\

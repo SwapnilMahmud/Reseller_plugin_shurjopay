@@ -30,25 +30,27 @@
         <script src="  https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> 
       <style>
-         .nav-md{
+         /* .nav-md{
          background-color:white;
          width: 107%;
-         }
+         } */
          
-         .left_col{
+         /* .left_col{
          position: fixed;
          height:100%;
-         }
-         .fa-bars{
+         } */
+         /* .fa-bars{
              margin-left:10px;
-         }
+         } */
     
          /* .left_col{
    width:169px;
 }
  .nav_title{
    width:169px;
-} */
+} */  .body{
+   color:black;
+     }
       </style>
    </head>
    <body class="nav-md">
@@ -152,9 +154,9 @@
 				<div class="col-md-12">
 					<div class="card">
 						<div class="card-header"> 
-						<a class="btn btn-danger"   href="#myModal" class="trigger-btn" data-toggle="modal"><i class="fa fa-trash-o fa-lg"></i> Delete selected</a> 
-						<a class="btn btn-primary"   href="#myModal" class="trigger-btn" data-toggle="modal"><i class="fa fa-download fa-lg" aria-hidden="true"> Excel</i></a> 
-						<a class="btn btn-primary"   href="#myModal" class="trigger-btn" data-toggle="modal"><i class="fa fa-download fa-lg" aria-hidden="true"> PDF</i></a> 
+						<!-- <a class="btn btn-danger"   href="#myModal" class="trigger-btn" data-toggle="modal"><i class="fa fa-trash-o fa-lg"></i> Delete selected</a>  -->
+						<a class="btn btn-primary"   href="{{url('/excel')}}" ><i class="fa fa-download fa-lg" aria-hidden="true"> Excel</i></a> 
+						<a class="btn btn-primary"   href="{{url('/pdf')}}"><i class="fa fa-download fa-lg" aria-hidden="true"> PDF</i></a> 
 						<a class="btn btn-primary"   href="#myModal" class="trigger-btn" data-toggle="modal"><i class="fa fa-download fa-lg" aria-hidden="true"> CSV</i></a> 
 					</div>
 						<div class="card-body">
@@ -170,9 +172,9 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
-                <th>Country</th>
+                <!-- <th>Country</th> -->
                 <th>City</th>
-                <th>Post code</th>
+                <!-- <th>Post code</th> -->
 				<th>Order id</th>
                 <th>Bank Status</th>
                 <th>Bank Trx Id</th>
@@ -196,9 +198,7 @@
       </div>
       <!-- footer content -->
       <footer class="main-footer" align="center">
-         <strong>
-            <hr>
-         </strong>
+         
          <strong id="demo">Copyright © 2022 <a href="#" style="color: #006400" target="_blank">shurjoPay Ltd.</a>
          </strong> All rights reserve
       </footer>
